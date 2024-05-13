@@ -9,14 +9,22 @@ export default function landing({ params }: any) {
 
   const fetchText = async () => {
     const response: any = await get_description(params.id);
-    const { result }: { result: string } = response;
-    setText(result);
+
+    Promise.resolve(response).then((response) => {
+      console.log(response);
+      const { result }: { result: string } = response;
+      setText(result);
+    });
   };
 
   const fetchImage = async () => {
     const response = await get_image(params.id);
-    const { imageData } = response;
-    setImage(imageData);
+
+    Promise.resolve(response).then((response) => {
+      console.log(response);
+      const { imageData } = response;
+      setImage(imageData);
+    });
   };
 
   useEffect(() => {

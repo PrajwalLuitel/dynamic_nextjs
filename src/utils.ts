@@ -3,11 +3,11 @@ export async function get_description(content: string) {
 
   const options = {
     method: "POST",
-    url: "https://chatgpt-42.p.rapidapi.com/conversationgpt4",
+    url: "https://" + process.env.TEXT_RAPID_API_HOST + "/conversationgpt4",
     headers: {
       "content-type": "application/json",
-      "X-RapidAPI-Key": "5ef2b39154msh39d7b565703b601p10528ajsn60d0b31d9cb3",
-      "X-RapidAPI-Host": "chatgpt-42.p.rapidapi.com",
+      "X-RapidAPI-Key": process.env.TEXT_RAPID_API_KEY,
+      "X-RapidAPI-Host": process.env.TEXT_RAPID_API_HOST,
     },
     data: {
       messages: [
@@ -42,11 +42,11 @@ export async function get_image(content: string) {
 
   const options = {
     method: "POST",
-    url: "https://ai-image-generator10.p.rapidapi.com/image_gen_v2",
+    url: "https://" + process.env.IMAGE_RAPID_API_HOST + "/image_gen_v2",
     headers: {
       "content-type": "application/json",
-      "X-RapidAPI-Key": "5ef2b39154msh39d7b565703b601p10528ajsn60d0b31d9cb3",
-      "X-RapidAPI-Host": "ai-image-generator10.p.rapidapi.com",
+      "X-RapidAPI-Key": process.env.IMAGE_RAPID_API_KEY,
+      "X-RapidAPI-Host": process.env.IMAGE_RAPID_API_HOST,
     },
     data: {
       query: "a beautiful " + content,
