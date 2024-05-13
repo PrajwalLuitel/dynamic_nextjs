@@ -24,3 +24,8 @@ body {
     text-wrap: balance;
   }
 }
+
+::selection {
+  color: white;
+  background-color: #00695c;
+}
