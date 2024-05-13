@@ -44,3 +44,5 @@ jspm_packages
 s
 .DS_Store
 **.DS_Store
+
+.env.local
