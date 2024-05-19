@@ -43,19 +43,19 @@ export default function landing({ params }: any) {
       {loading ? (
         <h2 className="text-3xl text-center py-11">Loading . . .</h2>
       ) : (
-        <div className="flex items-center justify-between p-10 max-md:flex-col">
+        <div className="flex items-center justify-between px-[7%] py-[4rem] max-md:flex-col">
           <img
-            className="flex-1 w-2/5 h-1/3 mx-auto mt-4 rounded-2xl max-md:w-4/5 translate-x-11 max-md:-translate-x-0 max-lg:translate-x-2 -z-10 shadow-2xl"
+            className="flex-1 w-2/5 h-1/3 mx-auto mt-4 rounded-2xl max-md:w-4/5 translate-x-11 max-md:-translate-x-0 max-lg:translate-x-2 z-1 shadow-2xl"
             src={image}
             alt="Sunset Banner"
           />
-          <div className="flex-1 py-[5%] px-4 bg-gray-100 text-teal-900 rounded-3xl w-3/4 max-md:w-full max-md:text-sm text-justify mb-20 shadow-2xl">
+          <div className="flex-1 z-10 py-[5%] px-4 bg-gray-100 text-teal-900 rounded-3xl w-3/4 max-md:w-full max-md:text-sm text-justify mb-20 shadow-2xl">
             <p>{text}</p>
           </div>
         </div>
       )}
 
-      <footer className="bg-teal-700 text-white text-center py-4 fixed bottom-0 w-full">
+      <footer className="bg-teal-700 text-white text-center py-4 bottom-0 w-full">
         <p>Thank you for Visiting!!</p>
       </footer>
     </>
